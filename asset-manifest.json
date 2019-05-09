@@ -1,14 +1,14 @@
 {
-  "main.css": "/react-boiler-room/static/css/main.3c63c6a4.chunk.css",
-  "main.js": "/react-boiler-room/static/js/main.26891fa1.chunk.js",
-  "main.js.map": "/react-boiler-room/static/js/main.26891fa1.chunk.js.map",
-  "runtime~main.js": "/react-boiler-room/static/js/runtime~main.2530098f.js",
-  "runtime~main.js.map": "/react-boiler-room/static/js/runtime~main.2530098f.js.map",
-  "static/js/2.713659bf.chunk.js": "/react-boiler-room/static/js/2.713659bf.chunk.js",
-  "static/js/2.713659bf.chunk.js.map": "/react-boiler-room/static/js/2.713659bf.chunk.js.map",
-  "index.html": "/react-boiler-room/index.html",
-  "precache-manifest.121abc63816eb195e649912510ffa25b.js": "/react-boiler-room/precache-manifest.121abc63816eb195e649912510ffa25b.js",
-  "service-worker.js": "/react-boiler-room/service-worker.js",
-  "static/css/main.3c63c6a4.chunk.css.map": "/react-boiler-room/static/css/main.3c63c6a4.chunk.css.map",
-  "static/media/Root.test.jsx.snap": "/react-boiler-room/static/media/Root.test.jsx.18e9f42e.snap"
+  "main.css": "/startupfest-ratings/static/css/main.3c63c6a4.chunk.css",
+  "main.js": "/startupfest-ratings/static/js/main.77de6610.chunk.js",
+  "main.js.map": "/startupfest-ratings/static/js/main.77de6610.chunk.js.map",
+  "runtime~main.js": "/startupfest-ratings/static/js/runtime~main.cdc15be2.js",
+  "runtime~main.js.map": "/startupfest-ratings/static/js/runtime~main.cdc15be2.js.map",
+  "static/js/2.b1b962f6.chunk.js": "/startupfest-ratings/static/js/2.b1b962f6.chunk.js",
+  "static/js/2.b1b962f6.chunk.js.map": "/startupfest-ratings/static/js/2.b1b962f6.chunk.js.map",
+  "index.html": "/startupfest-ratings/index.html",
+  "precache-manifest.fbef401f360542c285d48bc35a0fa912.js": "/startupfest-ratings/precache-manifest.fbef401f360542c285d48bc35a0fa912.js",
+  "service-worker.js": "/startupfest-ratings/service-worker.js",
+  "static/css/main.3c63c6a4.chunk.css.map": "/startupfest-ratings/static/css/main.3c63c6a4.chunk.css.map",
+  "static/media/Root.test.jsx.snap": "/startupfest-ratings/static/media/Root.test.jsx.18e9f42e.snap"
 }
