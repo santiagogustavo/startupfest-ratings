@@ -1,6 +1,6 @@
 {
-  "name": "react-boiler-room",
-  "homepage": "http://santiagogustavo.github.io/react-boiler-room",
+  "name": "startupfest-ratings",
+  "homepage": "http://santiagogustavo.github.io/startupfest-ratings",
   "version": "0.1.0",
   "private": true,
   "husky": {
