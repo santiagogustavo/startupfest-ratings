@@ -9,13 +9,18 @@ import {
 } from 'react-router-dom';
 
 /* STYLESHEETS */
+import 'assets/stylesheets/variables.css';
 import 'assets/stylesheets/index.css';
+
+/* COMPONENTS */
+import Navbar from 'components/navbar';
 
 /* ROUTES */
 import Routes from 'routes/index.json';
 
 const App = () => (
   <Fragment>
+    <Navbar />
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Switch>
         {
