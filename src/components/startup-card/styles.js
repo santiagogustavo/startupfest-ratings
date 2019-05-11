@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-// import media from 'utils/media';
 
 export const Container = styled.div`
   cursor: pointer;
@@ -30,6 +29,7 @@ export const Tag = styled.div`
 `;
 
 export const Image = styled.img`
+  background: var(--color-background);
   border-radius: var(--border-radius-half);
   overflow: hidden;
   height: 175px;

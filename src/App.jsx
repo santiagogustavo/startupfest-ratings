@@ -7,6 +7,7 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom';
+import { ApolloProvider } from 'react-apollo';
 
 /* STYLESHEETS */
 import 'assets/stylesheets/variables.css';
@@ -18,24 +19,28 @@ import Navbar from 'components/navbar';
 /* ROUTES */
 import Routes from 'routes/index.json';
 
+import client from 'utils/client';
+
 const App = () => (
   <Fragment>
     <Navbar />
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <Switch>
-        {
-          Routes.map(route => (
-            <Route
-              key={`route${route.path}`}
-              exact={route.exact}
-              path={route.path}
-              component={require(`./routes${route.component}`).default}
-            />
-          ))
-        }
-        <Redirect to="/" />
-      </Switch>
-    </BrowserRouter>
+    <ApolloProvider client={client}>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <Switch>
+          {
+            Routes.map(route => (
+              <Route
+                key={`route${route.path}`}
+                exact={route.exact}
+                path={route.path}
+                component={require(`./routes${route.component}`).default}
+              />
+            ))
+          }
+          <Redirect to="/" />
+        </Switch>
+      </BrowserRouter>
+    </ApolloProvider>
   </Fragment>
 );
 

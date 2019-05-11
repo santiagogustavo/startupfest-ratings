@@ -39,3 +39,11 @@ export const AnimatedCard = styled(StartupCard)`
   margin: 16px;
   animation: ${CardPopUp} 500ms ${props => props.delay}ms 1 forwards ease;
 `;
+
+export const LoaderContainer = styled.div`
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;

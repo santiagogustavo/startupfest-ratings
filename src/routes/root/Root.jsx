@@ -1,68 +1,83 @@
 import React from 'react';
+import { gql } from 'apollo-boost';
+
+import Loader from 'components/loader';
+
 import { randomColor } from 'utils/colors';
+import client from 'utils/client';
 
 import {
   Container,
   CardsContainer,
   AnimatedCard,
+  LoaderContainer,
 } from './styles';
 
 class App extends React.Component {
   state = {
-    startups: [
-      {
-        name: 'CORP 1',
-        segment: 'Health tech',
-      },
-      {
-        name: 'CORP 2',
-        segment: 'Health tech',
-      },
-      {
-        name: 'CORP 3',
-        segment: 'Health tech',
-      },
-      {
-        name: 'CORP 4',
-        segment: 'Health tech',
-      },
-      {
-        name: 'CORP 5',
-        segment: 'Health tech',
-      },
-      {
-        name: 'CORP 6',
-        segment: 'Health tech',
-      },
-      {
-        name: 'CORP 7',
-        segment: 'Health tech',
-      },
-      {
-        name: 'CORP 8',
-        segment: 'Health tech',
-      },
-    ],
+    startups: [],
+    isLoading: false,
   }
 
-  render() {
+  componentDidMount() {
+    this.fetchStartups();
+  }
+
+  fetchStartups = () => {
+    this.setState({ isLoading: true });
+    client.query({
+      query: gql`
+        {
+          allStartups {
+            name
+            imageUrl
+            description
+            Segment {
+              name
+            }
+          }
+        }
+      `,
+    }).then(({ data, error }) => {
+      this.setState({ isLoading: false });
+
+      if (!error) {
+        this.setState({ startups: data.allStartups });
+      }
+    });
+  };
+
+  renderCards = () => {
     const { startups } = this.state;
 
     return (
+      <CardsContainer>
+        {
+          startups.map((startup, index) => (
+            <AnimatedCard
+              key={`startup-card-${index}`}
+              color={randomColor()}
+              name={startup.name}
+              imageUrl={startup.imageUrl}
+              segment={startup.Segment.name}
+              delay={index * 250}
+            />
+          ))
+        }
+      </CardsContainer>
+    );
+  }
+
+  render() {
+    const { isLoading } = this.state;
+
+    return (
       <Container>
-        <CardsContainer>
-          {
-            startups.map((startup, index) => (
-              <AnimatedCard
-                key={`startup-card-${index}`}
-                color={randomColor()}
-                name={startup.name}
-                segment={startup.segment}
-                delay={index * 250}
-              />
-            ))
-          }
-        </CardsContainer>
+        {
+          isLoading
+            ? <LoaderContainer><Loader /></LoaderContainer>
+            : this.renderCards()
+        }
       </Container>
     );
   }

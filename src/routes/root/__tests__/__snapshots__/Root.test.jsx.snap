@@ -1,43 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Testing Root... Header should render correctly without props 1`] = `
-<div
-  className="App"
->
-  <header
-    className="App-header"
-  >
-    <styled.div>
-      <div
-        id="logo-layer-main-container"
-      >
-        <img
-          alt="logo-layer-main"
-          id="logo-layer-main"
-          src="ReactBoilerRoom.png"
-        />
-      </div>
-      <img
-        alt="logo-layer-mirror"
-        id="logo-layer-mirror"
-        src="ReactBoilerRoom.png"
-      />
-    </styled.div>
-    <p>
-      Edit 
-      <code>
-        src/App.js
-      </code>
-       and save to reload.
-    </p>
-    <a
-      className="App-link"
-      href="https://reactjs.org"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      Learn React
-    </a>
-  </header>
-</div>
+exports[`Testing Root... should render correctly without props 1`] = `
+<styled.div>
+  <styled.div>
+    <Loader
+      color="#4e4e4e"
+    />
+  </styled.div>
+</styled.div>
 `;
