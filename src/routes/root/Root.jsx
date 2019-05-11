@@ -1,32 +1,71 @@
 import React from 'react';
+import { randomColor } from 'utils/colors';
 
-import logo from 'assets/imgs/ReactBoilerRoom.png';
+import {
+  Container,
+  CardsContainer,
+  AnimatedCard,
+} from './styles';
 
-import 'assets/stylesheets/App.css';
-import { Logo } from './Root.styles';
+class App extends React.Component {
+  state = {
+    startups: [
+      {
+        name: 'CORP 1',
+        segment: 'Health tech',
+      },
+      {
+        name: 'CORP 2',
+        segment: 'Health tech',
+      },
+      {
+        name: 'CORP 3',
+        segment: 'Health tech',
+      },
+      {
+        name: 'CORP 4',
+        segment: 'Health tech',
+      },
+      {
+        name: 'CORP 5',
+        segment: 'Health tech',
+      },
+      {
+        name: 'CORP 6',
+        segment: 'Health tech',
+      },
+      {
+        name: 'CORP 7',
+        segment: 'Health tech',
+      },
+      {
+        name: 'CORP 8',
+        segment: 'Health tech',
+      },
+    ],
+  }
 
-const App = () => (
-  <div className="App">
-    <header className="App-header">
-      <Logo>
-        <div id="logo-layer-main-container">
-          <img src={logo} id="logo-layer-main" alt="logo-layer-main" />
-        </div>
-        <img src={logo} id="logo-layer-mirror" alt="logo-layer-mirror" />
-      </Logo>
-      <p>
-        Edit <code>src/App.js</code> and save to reload.
-      </p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
-    </header>
-  </div>
-);
+  render() {
+    const { startups } = this.state;
+
+    return (
+      <Container>
+        <CardsContainer>
+          {
+            startups.map((startup, index) => (
+              <AnimatedCard
+                key={`startup-card-${index}`}
+                color={randomColor()}
+                name={startup.name}
+                segment={startup.segment}
+                delay={index * 250}
+              />
+            ))
+          }
+        </CardsContainer>
+      </Container>
+    );
+  }
+}
 
 export default App;

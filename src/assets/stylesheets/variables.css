@@ -1,4 +1,9 @@
 :root {
+  --border-radius-default: 16px;
+  --border-radius-half: 8px;
+
+  --font-size-card: 24px;
+
   --font-family-primary: 'Comfortaa', 'sans-serif';
   --font-weight-primary: 700;
 

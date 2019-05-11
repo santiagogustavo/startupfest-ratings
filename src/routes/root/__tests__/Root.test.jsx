@@ -8,7 +8,7 @@ import Root from '../Root';
 describe('Testing Root...', () => {
   configure({ adapter: new Adapter() });
 
-  it('Header should render correctly without props', () => {
+  it('should render correctly without props', () => {
     const wrapper = shallow(<Root />);
     expect(toJson(wrapper)).toMatchSnapshot();
   });

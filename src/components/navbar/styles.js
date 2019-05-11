@@ -12,6 +12,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 999;
 
   ${media.medium`
     justify-content: flex-start;
@@ -44,7 +45,7 @@ const LinkStyles = css`
 export const LinkButton = styled.a`
   ${LinkStyles}
   position: absolute;
-  top: 16px;
+  top: 12px;
   left: 32px;
   display: block;
   font-size: 32px;
