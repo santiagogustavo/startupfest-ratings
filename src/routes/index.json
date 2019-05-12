@@ -4,5 +4,11 @@
     "component": "/root",
     "path": "/",
     "exact": true
+  },
+  {
+    "name": "Startup",
+    "component": "/startup",
+    "path": "/startup",
+    "exact": false
   }
 ]

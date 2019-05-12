@@ -5,6 +5,7 @@ import Loader from 'components/loader';
 
 import { randomColor } from 'utils/colors';
 import client from 'utils/client';
+import history from 'utils/history';
 
 import {
   Container,
@@ -47,6 +48,10 @@ class App extends React.Component {
     });
   };
 
+  handleCardClick = (name) => {
+    history.push(`/startup?name=${name}`);
+  }
+
   renderCards = () => {
     const { startups } = this.state;
 
@@ -61,6 +66,7 @@ class App extends React.Component {
               imageUrl={startup.imageUrl}
               segment={startup.Segment.name}
               delay={index * 250}
+              onClick={() => this.handleCardClick(startup.name)}
             />
           ))
         }

@@ -19,17 +19,21 @@ export const Container = styled.div`
   `}
 `;
 
-export const Logo = styled.img`
+export const LogoLink = styled.a`
   flex: 0;
-  display: block;
-  height: 40px;
   padding: 16px;
   width: fit-content;
   margin-left: 0px;
-  
+
   ${media.medium`
     margin-left: 32px;
   `}
+`;
+
+export const Logo = styled.img`
+  display: block;
+  height: 40px;
+  width: auto;
 `;
 
 const LinkStyles = css`

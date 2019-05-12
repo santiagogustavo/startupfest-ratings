@@ -4,6 +4,7 @@ import IMGLogo from 'assets/imgs/Logo.png';
 
 import {
   Container,
+  LogoLink,
   Logo,
   Link,
   LinkButton,
@@ -25,7 +26,9 @@ class Navbar extends React.Component {
         <LinkButton href="/results">
           <i className="fas fa-clipboard-list" />
         </LinkButton>
-        <Logo src={IMGLogo} />
+        <LogoLink href="/">
+          <Logo src={IMGLogo} />
+        </LogoLink>
         <Link href="/results">Resultados</Link>
         <SearchBar
           type="text"

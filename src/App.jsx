@@ -2,7 +2,7 @@
 /* eslint-disable import/no-dynamic-require */
 import React, { Fragment } from 'react';
 import {
-  BrowserRouter,
+  Router,
   Switch,
   Route,
   Redirect,
@@ -19,13 +19,15 @@ import Navbar from 'components/navbar';
 /* ROUTES */
 import Routes from 'routes/index.json';
 
+/* UTILS */
 import client from 'utils/client';
+import history from 'utils/history';
 
 const App = () => (
   <Fragment>
     <Navbar />
     <ApolloProvider client={client}>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Router basename={process.env.PUBLIC_URL} history={history}>
         <Switch>
           {
             Routes.map(route => (
@@ -39,7 +41,7 @@ const App = () => (
           }
           <Redirect to="/" />
         </Switch>
-      </BrowserRouter>
+      </Router>
     </ApolloProvider>
   </Fragment>
 );

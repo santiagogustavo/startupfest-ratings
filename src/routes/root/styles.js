@@ -22,6 +22,7 @@ export const CardPopUp = keyframes`
 export const Container = styled.div`
   background: var(--color-background);
   padding: 8px 16px;
+  padding-bottom: 32px;
 
   ${media.medium`
     padding: 32px 64px;
