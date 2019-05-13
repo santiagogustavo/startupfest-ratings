@@ -17,7 +17,9 @@ import 'assets/stylesheets/index.css';
 import Navbar from 'components/navbar';
 
 /* ROUTES */
-import Routes from 'routes/index.json';
+import Root from 'routes/root';
+import Results from 'routes/results';
+import Startup from 'routes/startup';
 
 /* UTILS */
 import client from 'utils/client';
@@ -29,16 +31,9 @@ const App = () => (
     <ApolloProvider client={client}>
       <Router basename={process.env.PUBLIC_URL} history={history}>
         <Switch>
-          {
-            Routes.map(route => (
-              <Route
-                key={`route${route.path}`}
-                exact={route.exact}
-                path={route.path}
-                component={require(`./routes${route.component}`).default}
-              />
-            ))
-          }
+          <Route exact path="/" component={Root} />
+          <Route exact path="/results" component={Results} />
+          <Route path="/startup" component={Startup} />
           <Redirect to="/" />
         </Switch>
       </Router>

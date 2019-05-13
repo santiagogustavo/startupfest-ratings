@@ -19,7 +19,8 @@ export const Container = styled.div`
   `}
 `;
 
-export const LogoLink = styled.a`
+export const LogoLink = styled.div`
+  cursor: pointer;
   flex: 0;
   padding: 16px;
   width: fit-content;
@@ -37,6 +38,7 @@ export const Logo = styled.img`
 `;
 
 const LinkStyles = css`
+  cursor: pointer;
   color: var(--color-primary);
   text-decoration: none;
   transition: all 200ms ease;
@@ -46,7 +48,7 @@ const LinkStyles = css`
   }
 `;
 
-export const LinkButton = styled.a`
+export const LinkButton = styled.div`
   ${LinkStyles}
   position: absolute;
   top: 12px;
@@ -59,7 +61,7 @@ export const LinkButton = styled.a`
   `}
 `;
 
-export const Link = styled.a`
+export const Link = styled.div`
   ${LinkStyles}
   display: none;
   margin-top: 8px;

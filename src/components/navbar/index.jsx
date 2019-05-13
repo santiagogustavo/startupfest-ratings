@@ -1,12 +1,13 @@
 import React from 'react';
 
 import IMGLogo from 'assets/imgs/Logo.png';
+import history from 'utils/history';
 
 import {
   Container,
   LogoLink,
   Logo,
-  Link,
+  Link as LinkText,
   LinkButton,
   SearchBar,
 } from './styles';
@@ -23,13 +24,13 @@ class Navbar extends React.Component {
 
     return (
       <Container>
-        <LinkButton href="/results">
+        <LinkButton onClick={() => history.push('/results')}>
           <i className="fas fa-clipboard-list" />
         </LinkButton>
-        <LogoLink href="/">
+        <LogoLink onClick={() => history.push('/')}>
           <Logo src={IMGLogo} />
         </LogoLink>
-        <Link href="/results">Resultados</Link>
+        <LinkText onClick={() => history.push('/results')}>Resultados</LinkText>
         <SearchBar
           type="text"
           id="navbar-search"

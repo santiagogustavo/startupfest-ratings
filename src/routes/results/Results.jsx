@@ -5,6 +5,8 @@ import _ from 'lodash';
 import Loader from 'components/loader';
 import Star from 'components/star';
 
+import history from 'utils/history';
+
 import {
   Container,
   LoaderContainer,
@@ -111,7 +113,9 @@ class Results extends React.Component {
                 <RowWrapper>
                   <StartupInfo>
                     <Position>{index + 1}º</Position>
-                    <StartupTitle href={`/startup?name=${startup.name}`}>{startup.name}</StartupTitle>
+                    <StartupTitle onClick={() => history.push(`/startup?name=${startup.name}`)}>
+                      {startup.name}
+                    </StartupTitle>
                   </StartupInfo>
                   <Votes>
                     <b style={{ marginRight: 16 }}>Votos contabilizados:</b>

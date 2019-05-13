@@ -139,7 +139,7 @@ export const Position = styled.h1`
   `}
 `;
 
-export const StartupTitle = styled.a`
+export const StartupTitle = styled.div`
   margin-top: 4px;
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-primary);
