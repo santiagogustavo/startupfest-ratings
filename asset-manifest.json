@@ -1,15 +1,14 @@
 {
-  "main.css": "/startupfest-ratings/static/css/main.6f1a6a16.chunk.css",
-  "main.js": "/startupfest-ratings/static/js/main.112eec71.chunk.js",
-  "main.js.map": "/startupfest-ratings/static/js/main.112eec71.chunk.js.map",
+  "main.css": "/startupfest-ratings/static/css/main.7bca99ac.chunk.css",
+  "main.js": "/startupfest-ratings/static/js/main.a6f033e3.chunk.js",
+  "main.js.map": "/startupfest-ratings/static/js/main.a6f033e3.chunk.js.map",
   "runtime~main.js": "/startupfest-ratings/static/js/runtime~main.cdc15be2.js",
   "runtime~main.js.map": "/startupfest-ratings/static/js/runtime~main.cdc15be2.js.map",
-  "static/js/2.4808a03f.chunk.js": "/startupfest-ratings/static/js/2.4808a03f.chunk.js",
-  "static/js/2.4808a03f.chunk.js.map": "/startupfest-ratings/static/js/2.4808a03f.chunk.js.map",
+  "static/js/2.6ba5499a.chunk.js": "/startupfest-ratings/static/js/2.6ba5499a.chunk.js",
+  "static/js/2.6ba5499a.chunk.js.map": "/startupfest-ratings/static/js/2.6ba5499a.chunk.js.map",
   "index.html": "/startupfest-ratings/index.html",
-  "precache-manifest.0cb5adaa86de61acf969fa7c9f1021f2.js": "/startupfest-ratings/precache-manifest.0cb5adaa86de61acf969fa7c9f1021f2.js",
+  "precache-manifest.28530e3703e8dd214c70af0feb62499b.js": "/startupfest-ratings/precache-manifest.28530e3703e8dd214c70af0feb62499b.js",
   "service-worker.js": "/startupfest-ratings/service-worker.js",
-  "static/css/main.6f1a6a16.chunk.css.map": "/startupfest-ratings/static/css/main.6f1a6a16.chunk.css.map",
-  "static/media/Logo.png": "/startupfest-ratings/static/media/Logo.48ce5aae.png",
-  "static/media/Root.test.jsx.snap": "/startupfest-ratings/static/media/Root.test.jsx.65e286d1.snap"
+  "static/css/main.7bca99ac.chunk.css.map": "/startupfest-ratings/static/css/main.7bca99ac.chunk.css.map",
+  "static/media/Logo.png": "/startupfest-ratings/static/media/Logo.48ce5aae.png"
 }
