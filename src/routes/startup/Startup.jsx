@@ -10,6 +10,7 @@ import Tag from 'components/tag';
 
 import client from 'utils/client';
 import history from 'utils/history';
+import firebase from 'utils/firebase';
 import formatCurrency from 'utils/format-currency';
 
 import {
@@ -41,6 +42,8 @@ class Startup extends React.Component {
     development: 0,
     isLoading: false,
   }
+
+  ref = firebase.firestore().collection('ratings');
 
   componentDidMount() {
     const {
@@ -78,6 +81,25 @@ class Startup extends React.Component {
   }
 
   handleCategoryRating = (category, rating) => this.setState({ [category]: rating });
+
+  handleSubmitRatings = () => {
+    const {
+      startup: { name }, proposal, pitch, development,
+    } = this.state;
+
+    this.setState({ isLoading: true });
+    this.ref.add({
+      name, proposal, pitch, development,
+    })
+      .then(() => {
+        this.setState({ isLoading: false });
+        history.push('/results');
+      })
+      .catch(() => {
+        this.setState({ isLoading: false });
+        history.push('/500');
+      });
+  }
 
   renderStartup = () => {
     const {
@@ -163,10 +185,10 @@ class Startup extends React.Component {
             </LineWrapper>
           </RateContainer>
           <ButtonsContainer>
-            <Button>
+            <Button onClick={this.handleSubmitRatings}>
               Avaliar
             </Button>
-            <Button onClick={() => history.push('/')} invert>
+            <Button onClick={() => history.goBack()} invert>
               Voltar
             </Button>
           </ButtonsContainer>
